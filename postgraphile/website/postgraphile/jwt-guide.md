@@ -22,7 +22,17 @@ leverage powerful pre-built authentication stacks such as
 [passport.js](http://www.passportjs.org/) which has OAuth integration with most
 major "social login" providers.
 
+In order to enable passing JWT claims directly to postgres
+in Version 5, it is recommended that you handle JWTs yourself in 
+the `preset.grafast.context` function. **If, however, you wish
+to implement the functionality as described below **
+(with no additional validation or error checking), you can 
+use the `postgraphile/presets/lazy-jwt` preset. More information
+on this preset can be found in the
+[`pgSettings` docs](./config#pgsettings).
+
 :::
+
 
 ## PostgreSQL JSON Web Token Serialization Specification
 
